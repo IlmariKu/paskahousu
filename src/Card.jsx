@@ -1,10 +1,19 @@
 import React from 'react';
 import styled from "styled-components";
 
+const suits = {
+    "diamond": "♦",
+    "spade": "♠",
+    "heart": "♥",
+    "club": "♣"
+}
+
+
 export function Card(props) {
+
     return (
         <CardFace>
-
+            {suits[props.suit]}
         </CardFace>
     );
 }
