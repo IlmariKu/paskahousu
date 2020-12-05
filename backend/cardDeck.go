@@ -2,19 +2,29 @@ package main
 
 // Card holds the card suits and types in the deck
 type Card struct {
-	Type string
-	Suit string
+	cardValue string
+	Suit      string
 }
 
 // Deck holds the cards
 type Deck []Card
 
-func createNewCardDeck() (deck Deck) {
+func createNewCardDeck() (cardDeck Deck) {
 
-	types := []string{"Two", "Three", "Four", "Five", "Six", "Seven",
+	cardValues := []string{"Two", "Three", "Four", "Five", "Six", "Seven",
 		"Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"}
 
 	suits := []string{"Heart", "Diamond", "Club", "Spade"}
 
-	return deck
+	for _, cardValue := range cardValues {
+		for _, suit := range suits {
+			card := Card{
+				cardValue: cardValue,
+				Suit:      suit,
+			}
+			cardDeck = append(cardDeck, card)
+		}
+	}
+
+	return cardDeck
 }
