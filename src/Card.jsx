@@ -48,6 +48,7 @@ const BottomNumber = styled.div`
 const CardArea = styled.div`
   display: flex;
   padding: 0.5em;
+  box-sizing: border-box;
   flex-direction: column;
   justify-content: space-between;
   color: ${(props) =>
