@@ -9,7 +9,7 @@ type Card struct {
 // Deck holds the cards
 type Deck []Card
 
-func createNewCardDeck() (cardDeck Deck) {
+func CreateNewCardDeck() (cardDeck Deck) {
 
 	cardValues := []string{"Two", "Three", "Four", "Five", "Six", "Seven",
 		"Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"}
