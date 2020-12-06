@@ -1,4 +1,4 @@
-package card_deck
+package card
 
 // Card holds the card suits and types in the deck
 type Card struct {

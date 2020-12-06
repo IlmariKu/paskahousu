@@ -1,7 +1,6 @@
-package shuffle
+package card
 
-import "github.com/paskahousu/backend/card_deck"
-
-func shuffleCardDeck(card_deck card_deck.Deck) []Deck {
+func ShuffleCardDeck(card_deck Deck, numberOfPLayers int) []Deck {
+	cardDeck := CreateNewCardDeck()
 
 }
