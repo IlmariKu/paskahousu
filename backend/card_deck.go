@@ -2,7 +2,7 @@ package card
 
 // Card holds the card suits and types in the deck
 type Card struct {
-	cardValue string
+	cardValue int
 	Suit      string
 }
 
@@ -11,8 +11,8 @@ type Deck []Card
 
 func CreateNewCardDeck() (cardDeck Deck) {
 
-	cardValues := []string{"Two", "Three", "Four", "Five", "Six", "Seven",
-		"Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"}
+	cardValues := []int{2, 3, 4, 5, 6, 7,
+		8, 9, 10, 11, 12, 13, 16}
 
 	suits := []string{"Heart", "Diamond", "Club", "Spade"}
 
