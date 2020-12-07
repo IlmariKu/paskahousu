@@ -9,6 +9,7 @@ type Card struct {
 // Deck holds the cards
 type Deck []Card
 
+// CreateNewCardDeck Makes a new 52 card deck with number values and their suit.
 func CreateNewCardDeck() (cardDeck Deck) {
 	cardValues := []int{2, 3, 4, 5, 6, 7,
 		8, 9, 10, 11, 12, 13, 16}
@@ -24,6 +25,5 @@ func CreateNewCardDeck() (cardDeck Deck) {
 			cardDeck = append(cardDeck, card)
 		}
 	}
-
 	return cardDeck
 }

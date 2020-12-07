@@ -2,6 +2,7 @@ package card
 
 import "math/rand"
 
+// DealCardsFromCardDeck deal a 5 card hand for a determined number of players
 func DealCardsFromCardDeck(cardDeck []Deck, numberOfPlayers int) (cardDeckForPlayers []Deck) {
 	for i := 0; i == numberOfPlayers; i++ {
 		fiveRandomCards := chooseFiveCardsRandomly(cardDeck)
