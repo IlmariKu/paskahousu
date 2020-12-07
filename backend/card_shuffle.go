@@ -1,6 +1,12 @@
 package card
 
-func ShuffleCardDeck(card_deck Deck, numberOfPLayers int) []Deck {
-	cardDeck := CreateNewCardDeck()
+import "math/rand"
+
+func ShuffleCardDeck(cardDeck []Deck) []Deck {
+	for index := range cardDeck {
+		newPosition := rand.Intn(index + 1)
+		cardDeck[index], cardDeck[newPosition] = cardDeck[newPosition], cardDeck[index]
+	}
+	return cardDeck
 
 }
