@@ -1,12 +1,8 @@
 package card
 
-import (
-	"fmt"
-)
-
 // DealCardsFromCardDeck deal a 5 card hand for a determined number of players
 func DealCardsFromCardDeck(cardDeck Deck) (dealtCardHands []Deck) {
-	fmt.Printf("%+v\n", "nyt ollaan tässä")
+
 	for index := range cardDeck {
 		if index%5 == 0 && index != 0 {
 			singleHand := chunkCardDeck(cardDeck, index)

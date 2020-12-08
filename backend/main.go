@@ -10,5 +10,4 @@ func main() {
 	cardDeck := card.GetCardsForPlayers()
 	fmt.Printf("%+v\n", len(cardDeck))
 	fmt.Printf("%+v\n", cardDeck)
-	//}
 }
