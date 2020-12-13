@@ -1,25 +1,25 @@
 import * as React from "react";
 import "./index.css";
 import { Card } from "./Card";
-import { CardTurned } from "./CardTurned";
 import styled from "styled-components";
 
 export default () => (
     <>
+    <div style={{"height": "5vh"}}></div>
     <Cards>
       <Card suit="spade" number="10"/>
       <Card suit="heart" number="5"/>
       <Card suit="diamond" number="3"/>
       <Card suit="club" number="7"/>
-      <CardTurned />
+      <Card suit="club" number="9"/>
       </Cards>
     </>
   );
 
 const Cards = styled.div`
   display: flex;
+  position: absolute;
   justify-content: space-between;
-  margin-left: 10vw;
-  margin-top: 10vh;
-  flex-wrap: wrap;
+  margin-left: 20vw;
+  bottom: 5vh;
 `;

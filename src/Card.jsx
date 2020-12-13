@@ -10,11 +10,11 @@ const suits = {
 
 export function Card(props) {
   return (
-    <CardArea suit={props.suit}>
-      <TopNumber>
+    <CardArea faceDown={props.faceDown} suit={props.suit}>
+      <div>
         <CardNumber>{props.number}</CardNumber>
         <SuitIcon>{suits[props.suit]}</SuitIcon>
-      </TopNumber>
+      </div>
       <MidSuitIcon>{suits[props.suit]}</MidSuitIcon>
       <BottomNumber>
         <CardNumber>{props.number}</CardNumber>
@@ -37,12 +37,8 @@ const CardNumber = styled.div`
   font-size: ${(props) => (props.large ? "4em" : "2em")};
 `;
 
-const TopNumber = styled.div`
-
-`;
-
 const BottomNumber = styled.div`
-    text-align: right;
+  text-align: right;
 `;
 
 const CardArea = styled.div`
@@ -53,8 +49,10 @@ const CardArea = styled.div`
   justify-content: space-between;
   color: ${(props) =>
     props.suit == "heart" || props.suit == "diamond" ? "red" : "black"};
-  height: 320px;
-  width: 200px;
-  background-color: white;
-  border-radius: 25px;
+  height: 240px;
+  width: 150px;
+  background: ${(props) =>
+    props.faceDown ? "linear-gradient(orange, yellow)" : "white"};
+  border-radius: 20px;
+  border: ${(props) => (props.faceDown ? "solid 2px" : "")};
 `;
